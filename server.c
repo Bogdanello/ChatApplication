@@ -371,7 +371,7 @@ int main(int argc, char *argv[])
       handle_new_connection(&server_info, clients);
     }
 
-    for(i = 0; i < MAX_CLIENTS; i++)
+    for(int i = 0; i < MAX_CLIENTS; i++)
     {
       if(clients[i].socket > 0 && FD_ISSET(clients[i].socket, &file_descriptors))
       {
